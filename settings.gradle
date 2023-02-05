@@ -14,4 +14,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Permissions App"
 include ':app'
-include ':Test'

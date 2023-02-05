@@ -6,6 +6,7 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -82,7 +83,7 @@ class MainActivity : AppCompatActivity() {
             ) == PackageManager.PERMISSION_GRANTED
         ) {
             binding.tvStatus.text = getString(R.string.permission_granted)
-
+            Toast.makeText(this, "Permission already Granted", Toast.LENGTH_SHORT).show()
         } else {
             requestCameraPermission()
         }
